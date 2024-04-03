@@ -24,9 +24,16 @@ function App() {
 
   function getPrevMonthDays() {
     const firstDayCurrMonth = new Date(currMonth.year, currMonth.month, 1)
+    console.log(firstDayCurrMonth.getDay())
     if ( firstDayCurrMonth.getDay() === 1 ) return []
+
+    let numberOfPrevDays: number
+    if ( firstDayCurrMonth.getDay() === 0 ) {
+      numberOfPrevDays = 6
+    } else {
+      numberOfPrevDays = firstDayCurrMonth.getDay() - 1
+    }
     
-    const numberOfPrevDays = firstDayCurrMonth.getDay() - 1
     const lastDayPrevMonth = new Date(currMonth.year, currMonth.month, 0)
 
     const prevMonthDays = getAllDaysInMonth(lastDayPrevMonth.getFullYear(), lastDayPrevMonth.getMonth() + 1)
@@ -56,7 +63,12 @@ function App() {
 
   function showWeekday(num: number) {
     const firstDayCurrMonth = new Date(currMonth.year, currMonth.month, 1)
-    const numberOfDaysToShow = 8 - firstDayCurrMonth.getDay()
+    let numberOfDaysToShow: number
+    if (firstDayCurrMonth.getDay() === 0) {
+      numberOfDaysToShow = 1
+    } else {
+      numberOfDaysToShow = 8 - firstDayCurrMonth.getDay()
+    }
     return num < numberOfDaysToShow
   }
 
