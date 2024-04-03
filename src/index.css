@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply border border-slate-300;
+    @apply rounded;
+    @apply px-4 pb-[2px];
+    @apply text-base/[30px];
+    @apply transition-colors duration-200;
+    @apply bg-transparent;
+    @apply outline-none;
+    @apply hover:bg-slate-200;
+    @apply focus-visible:ring-2;
+    @apply focus-visible:ring-slate-300;
+  }
+
+  .btn-delete {
+    @apply border-red-500;
+    @apply bg-red-200;
+    @apply hover:bg-red-300;
+    @apply text-red-950;
+    @apply focus-visible:ring-red-500;
+  }
+  
+  .btn-success {
+    @apply border-green-500;
+    @apply bg-green-200;
+    @apply hover:bg-green-300;
+    @apply text-green-950;
+    @apply focus-visible:ring-green-500;
+  }
+}

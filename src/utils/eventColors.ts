@@ -1,0 +1,1 @@
+export const EVENT_COLORS = ["red", "blue", "green", "purple"] as const
