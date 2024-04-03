@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
+import { useLayoutEffect, useMemo, useRef, useState } from "react"
 import EventForm from "./EventForm"
 import type { CalEvent } from "../context/EventContext"
 import { cn } from "../utils/cs"
