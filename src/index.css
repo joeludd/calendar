@@ -6,7 +6,7 @@
   .btn {
     @apply border border-slate-300;
     @apply rounded;
-    @apply px-4 pb-[2px];
+    @apply px-4 py-px;
     @apply text-base/[30px];
     @apply transition-colors duration-200;
     @apply bg-transparent;

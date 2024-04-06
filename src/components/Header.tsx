@@ -54,12 +54,12 @@ export default function Header({ currMonth, setCurrMonth }: HeaderProps) {
   
   return (
     <div className="p-4 w-full flex items-center space-x-2 text-slate-600">
-      <button className="btn hover:bg-indigo-200 hover:border-indigo-500 hover:color-indigo-600 focus-visible:bg-indigo-200 focus-visible:ring-0 focus-visible:text-indigo-600 focus-visible:border-indigo-500" onClick={() => setToday()}>Today</button>
-      <div className="text-xl space-x-px bg-slate-300 rounded overflow-hidden hover:bg-indigo-500 transition-colors duration-200 focus-visible:bg-indigo-500">
-        <button className="size-[34px] pb-0.5 text-center bg-slate-50 transition-colors duration-200 hover:bg-indigo-200 hover:text-indigo-600 border border-r-0 border-slate-300 rounded-l hover:border-indigo-500 focus-visible:bg-indigo-200 focus-visible:border-indigo-500 focus-visible:text-indigo-600 focus-visible:outline-none" onClick={() => handleChangeMonth("prev")}>&lt;</button>
-        <button className="size-[34px] pb-0.5 text-center bg-slate-50 transition-colors duration-200 hover:bg-indigo-200 hover:text-indigo-600 border border-l-0 border-slate-300 rounded-r hover:border-indigo-500 focus-visible:bg-indigo-200 focus-visible:border-indigo-500 focus-visible:text-indigo-600 focus-visible:outline-none" onClick={() => handleChangeMonth("next")}>&gt;</button>
+      <button className="btn hover:bg-indigo-200 hover:border-indigo-500 hover:text-indigo-600 focus-visible:bg-indigo-200 focus-visible:ring-0 focus-visible:text-indigo-600 focus-visible:border-indigo-500" onClick={() => setToday()}>Today</button>
+      <div className="text-lg space-x-px bg-slate-300 rounded overflow-hidden hover:bg-indigo-500 transition-colors duration-200 focus-visible:bg-indigo-500">
+        <button className="size-[34px] pb-px text-center bg-slate-50 transition-colors duration-200 hover:bg-indigo-200 hover:text-indigo-600 border border-r-0 border-slate-300 rounded-l hover:border-indigo-500 focus-visible:bg-indigo-200 focus-visible:border-indigo-500 focus-visible:text-indigo-600 focus-visible:outline-none" onClick={() => handleChangeMonth("prev")}>&lt;</button>
+        <button className="size-[34px] pb-px text-center bg-slate-50 transition-colors duration-200 hover:bg-indigo-200 hover:text-indigo-600 border border-l-0 border-slate-300 rounded-r hover:border-indigo-500 focus-visible:bg-indigo-200 focus-visible:border-indigo-500 focus-visible:text-indigo-600 focus-visible:outline-none" onClick={() => handleChangeMonth("next")}>&gt;</button>
       </div>
-      <span className="text-2xl font-bold !ml-4 pb-0.5 uppercase spacing tracking-tight">{`${monthName} ${currMonth.year}`}</span>
+      <span className="text-2xl font-extrabold !ml-4 pt-px uppercase tracking-tighter">{`${monthName} ${currMonth.year}`}</span>
     </div>
   )
 }

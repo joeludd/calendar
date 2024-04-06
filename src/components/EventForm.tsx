@@ -173,10 +173,10 @@ export default function EventForm({ day, event, ...modalProps }: EventFormProps)
   return (
     <Modal {...modalProps}>
       {/* Modal title */}
-      <div className="relative text-xl/10 pl-4 pr-14 pb-0.5 border-b border-slate-300 flex justify-between items-center [&>*:not:last-child]:mr-1">
-        <div className="uppercase font-bold tracking-tight text-slate-600">{event ? "Edit" : "Add"} event</div>
+      <div className="relative text-xl/10 pl-4 pr-14 py-px border-b border-slate-300 flex justify-between items-center [&>*:not:last-child]:mr-1">
+        <div className="uppercase font-extrabold tracking-tighter text-slate-600">{event ? "Edit" : "Add"} event</div>
         <small className="text-slate-500">{`${day.getDate()}/${day.getMonth() + 1}/${day.getFullYear().toString().substring(2)}`}</small>
-        <button className="close-btn absolute -top-px -right-px text-2xl size-11 text-center align-middle pb-1 border border-slate-300 rounded-tr-lg transition-colors duration-200 hover:bg-indigo-200 hover:border-indigo-500 hover:text-indigo-600 outline-none focus-visible:bg-indigo-200 focus-visible:border-indigo-500 focus-visible:text-indigo-600" onClick={modalProps.onClose}>&times;</button>
+        <button className="close-btn absolute -top-px -right-px text-2xl size-11 text-center align-middle border border-slate-300 rounded-tr-lg transition-colors duration-200 hover:bg-indigo-200 hover:border-indigo-500 hover:text-indigo-600 outline-none focus-visible:bg-indigo-200 focus-visible:border-indigo-500 focus-visible:text-indigo-600" onClick={modalProps.onClose}>&times;</button>
       </div>
       <div className="p-4">
         <form onSubmit={event ? e => handleUpdateEvent(e) : e => handleNewEvent(e)}>
@@ -260,7 +260,7 @@ type FormGroupProps = React.HTMLAttributes<HTMLDivElement>
 function FormGroup( { children, className, ...props }: FormGroupProps ) {
   return (
     <div {...props} 
-      className={cn("flex flex-col [&:not(:last-child)]:mb-4 [&_label]:text-bold [&_label]:text-sm [&_label]:text-slate-500 [&_label:not(.color-label)]:mb-1 [&_input]:px-2 [&_input]:pt-1 [&_input]:pb-1.5 [&_input]:bg-slate-50 [&_input]:border [&_input]:border-slate-300 [&_input]:rounded [&_input:focus-visible]:border-indigo-500 [&_input:focus-visible]:outline-none", className)}>
+      className={cn("flex flex-col [&:not(:last-child)]:mb-4 [&_label]:text-bold [&_label]:text-sm [&_label]:text-slate-500 [&_label]:tracking-tight [&_label:not(.color-label)]:my-0.5 [&_input]:px-2 [&_input]:pt-1 [&_input]:pb-[5px] [&_input]:bg-slate-50 [&_input]:border [&_input]:border-slate-300 [&_input]:rounded [&_input:focus-visible]:border-indigo-500 [&_input:focus-visible]:outline-none", className)}>
       {children}
     </div>
   )

@@ -76,7 +76,7 @@ export default function Events({ data, day }: EventsProps) {
         data.allDayEvents.map(event => {
           console.log
           return (
-            <button key={event.id} className={cn("all-day-event pb-1 px-2 rounded border flex text-center flex-shrink-0 w-full hover:ring-1 focus-visible:ring-1 outline-none ring-inset transition-all duration-200", `text-${event.color}-600 bg-${event.color}-200 border-${event.color}-500 ring-${event.color}-500`)} onClick={() => handleEditEvent(event)}>
+            <button key={event.id} className={cn("all-day-event tracking-tight py-0.5 px-2 rounded border flex flex-shrink-0 w-full hover:ring-1 focus-visible:ring-1 outline-none ring-inset transition-all duration-200", `text-${event.color}-600 bg-${event.color}-200 border-${event.color}-500 ring-${event.color}-500`)} onClick={() => handleEditEvent(event)}>
               <div className="truncate">{event.name}</div>
             </button>
           )
@@ -85,17 +85,17 @@ export default function Events({ data, day }: EventsProps) {
       {
         sortedTimeEvents.map(event => {
           return (
-            <button key={event.id} className={cn("group/event time-event flex text-center flex-shrink-0 w-full px-1 rounded [&>*:not(:last-child)]:mr-2 hover:ring-1 focus-visible:ring-1 outline-none ring-inset transition-all duration-200", `ring-${event.color}-500`)} onClick={() => handleEditEvent(event)}>
+            <button key={event.id} className={cn("group/event time-event tracking-tight flex flex-shrink-0 w-full px-1 py-px rounded [&>*:not(:last-child)]:mr-2 hover:ring-1 focus-visible:ring-1 outline-none ring-inset transition-all duration-200", `ring-${event.color}-500`)} onClick={() => handleEditEvent(event)}>
               <div className={cn('rounded-full size-2 flex-shrink-0 self-center', `bg-${event.color}-500`)}></div>
-              <div className="text-slate-600 pb-0.5 group-hover/event:text-slate-800">{event.startTime}</div>
-              <div className="truncate text-slate-800 pb-0.5 group-hover/event:text-slate-950">{event.name}</div>
+              <div className="text-slate-600 py-px group-hover/event:text-slate-800">{event.startTime}</div>
+              <div className="truncate text-slate-800 py-px group-hover/event:text-slate-950">{event.name}</div>
             </button>
           )
         })
       }
     </div>
     {showAllEventsBtn && (
-      <button className="absolute w-[calc(100%+2px)] -left-px -bottom-px bg-slate-200 text-xs/4 text-slate-600 pt-[1px] pb-[2px] border border-slate-300 hover:bg-indigo-200 hover:text-indigo-600 hover:border-indigo-500 transition-colors duration-200" onClick={() => setAllEventsOpen(true)}>View all</button>
+      <button className="absolute w-[calc(100%+2px)] -left-px -bottom-px bg-slate-200 text-xs/4 text-slate-600 py-[2px] border border-slate-300 hover:bg-indigo-200 hover:text-indigo-600 hover:border-indigo-500 transition-colors duration-200" onClick={() => setAllEventsOpen(true)}>View all</button>
     )}
     <ShowEventsModal allDayEvents={data.allDayEvents} timeEvents={sortedTimeEvents} day={day} isOpen={allEventsOpen} onClose={() => setAllEventsOpen(false)} />
     <EventForm event={currEvent} day={day} isOpen={eventFormOpen} onClose={() => setEventFormOpen(false)} />

@@ -48,7 +48,7 @@ export default {
         'pop-out': 'popIn 250ms ease-in-out forwards reverse',
       },
       fontFamily: {
-        'sans': ['new-science', 'sans-serif']
+        'sans': ['input-sans', 'sans-serif']
       }
     },
   },

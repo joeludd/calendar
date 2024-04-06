@@ -24,7 +24,6 @@ function App() {
 
   function getPrevMonthDays() {
     const firstDayCurrMonth = new Date(currMonth.year, currMonth.month, 1)
-    console.log(firstDayCurrMonth.getDay())
     if ( firstDayCurrMonth.getDay() === 1 ) return []
 
     let numberOfPrevDays: number
@@ -86,7 +85,7 @@ function App() {
 
   return (
     <EventsProvider>
-      <div className="h-screen flex flex-col bg-slate-50">
+      <div className="h-screen flex flex-col">
         <Header currMonth={currMonth} setCurrMonth={setCurrMonth} />
         {/* Calendar days */}
         <div className="grow grid overflow-y-auto grid-cols-7 auto-rows-100px gap-px p-px bg-slate-300">
